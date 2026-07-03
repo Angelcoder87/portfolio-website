@@ -33,3 +33,7 @@ body {
 .glow {
   box-shadow: 0 0 30px rgba(139, 92, 246, 0.35);
 }
+h1 {
+  font-size: 50px; /* 20px */
+  font-weight: 600;
+}

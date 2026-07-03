@@ -42,7 +42,7 @@ export default function Hero() {
 
           {/* Heading */}
 
-          <h1 className="text-5xl font-black leading-tight text-white md:text-7xl">
+       <h1 className="text-lg md:text-2xl font-medium leading-tight text-white">
             Frontend
             <br />
 
