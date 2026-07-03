@@ -1,23 +1,11 @@
-import Navbar from "./components/layout/Navbar";
-import Hero from "./components/sections/Hero";
+import Navbar from "./components/Navbar";
 import About from "./components/sections/About";
-import Projects from "./components/sections/Projects";
-import Skills from "./components/sections/Skills";
-import Contact from "./components/sections/Contact";
-import Footer from "./components/layout/Footer";
 
-function App() {
+export default function App() {
   return (
-    <>
+    <div className="bg-[#07050F] text-white min-h-screen">
       <Navbar />
-      <Hero />
       <About />
-      <Projects />
-      <Skills />
-      <Contact />
-      <Footer />
-    </>
+    </div>
   );
 }
-
-export default App;

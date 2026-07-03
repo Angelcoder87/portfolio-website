@@ -1,23 +1,43 @@
-function Contact() {
+export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="py-32 px-6 text-center bg-[#09090B]"
-    >
-      <h2 className="text-5xl font-bold">
-        Let's Build Something Amazing
-      </h2>
+    <section id="contact" className="py-24 px-6">
 
-      <p className="text-zinc-400 mt-6 max-w-2xl mx-auto">
-        I'm always open to internships, freelance projects, and opportunities
-        where I can grow while creating meaningful digital experiences.
-      </p>
+      <div className="max-w-6xl mx-auto">
 
-      <button className="mt-10 px-8 py-4 rounded-full bg-violet-600 hover:bg-violet-500 transition">
-        Get In Touch
-      </button>
+        <h2 className="text-3xl font-bold mb-6">Contact</h2>
+
+        <p className="text-zinc-400 mb-10">
+          Let’s work together or just say hello 👋
+        </p>
+
+        <form className="max-w-xl space-y-4">
+
+          <input
+            type="text"
+            placeholder="Your Name"
+            className="w-full p-3 rounded-lg bg-zinc-900 border border-zinc-800"
+          />
+
+          <input
+            type="email"
+            placeholder="Your Email"
+            className="w-full p-3 rounded-lg bg-zinc-900 border border-zinc-800"
+          />
+
+          <textarea
+            placeholder="Your Message"
+            rows="5"
+            className="w-full p-3 rounded-lg bg-zinc-900 border border-zinc-800"
+          />
+
+          <button className="px-6 py-3 bg-violet-600 hover:bg-violet-500 rounded-full transition">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
     </section>
   );
 }
-
-export default Contact;
