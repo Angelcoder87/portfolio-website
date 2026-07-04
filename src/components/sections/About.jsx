@@ -88,26 +88,31 @@ export default function About() {
           </div>
 
           {/* Buttons */}
+<div className="flex gap-5 mt-10 flex-wrap">
 
-          <div className="flex gap-5 mt-10 flex-wrap">
+  {/* Open CV */}
+  <a
+    href="/Angela_Odhiambo_CV.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="border border-white/10 px-8 py-4 rounded-2xl flex items-center gap-3 hover:border-primary transition"
+  >
+    <FiDownload />
+    Open CV
+  </a>
 
-            <button className="border border-white/10 px-8 py-4 rounded-2xl flex items-center gap-3 hover:border-primary transition">
+  {/* WhatsApp */}
+  <a
+    href="https://wa.me/254725924907?text=Hi%20Angela!%20I%20came%20across%20your%20portfolio%20and%20I'd%20love%20to%20connect."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-gradient-to-r from-violet-600 to-purple-500 px-8 py-4 rounded-2xl flex items-center gap-3 hover:scale-105 transition"
+  >
+    <FiMail />
+    Let's Connect
+  </a>
 
-              <FiDownload />
-
-              Download CV
-
-            </button>
-
-            <button className="bg-gradient-to-r from-violet-600 to-purple-500 px-8 py-4 rounded-2xl flex items-center gap-3 hover:scale-105 transition">
-
-              <FiMail />
-
-              Let's Connect
-
-            </button>
-
-          </div>
+</div>
 
        </motion.div>
 
