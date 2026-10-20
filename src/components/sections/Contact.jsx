@@ -19,8 +19,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="relative py-24 px-6 overflow-hidden">
-      <div className="orb w-[560px] h-[560px] bg-gradient-to-br from-violet-400/40 to-blue-400/30 -bottom-40 right-0"></div>
-      <div className="orb w-[320px] h-[320px] bg-purple-300/25 top-10 -left-20"></div>
+      <div className="orb w-[560px] h-[560px] orb-violet -bottom-40 right-0"></div>
+      <div className="orb w-[320px] h-[320px] orb-pink orb-c top-10 -left-20"></div>
 
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center max-w-2xl mx-auto mb-14">

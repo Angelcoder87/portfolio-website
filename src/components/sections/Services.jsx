@@ -27,7 +27,7 @@ const services = [
 export default function Services() {
   return (
     <section id="services" className="relative py-24 px-6 overflow-hidden">
-      <div className="orb w-[340px] h-[340px] bg-blue-300/20 -left-24 top-20"></div>
+      <div className="orb w-[340px] h-[340px] orb-blue orb-b -left-24 top-20"></div>
 
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center max-w-2xl mx-auto">

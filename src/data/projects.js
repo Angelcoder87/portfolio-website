@@ -1,3 +1,6 @@
+import verivoiceShot from "../assets/projects/verivoice.png";
+import novashopShot from "../assets/projects/novashop.png";
+
 const projects = [
   {
     id: 1,
@@ -9,6 +12,7 @@ const projects = [
     category: "Web App",
     github: "https://github.com/Angelcoder87/Verivoice",
     demo: "https://angelcoder87.github.io/Verivoice/",
+    image: verivoiceShot,
     featured: true,
   },
   {
@@ -21,6 +25,7 @@ const projects = [
     category: "Startup",
     github: "https://github.com/Angelcoder87/pesly",
     demo: null,
+    image: null,
     featured: true,
   },
   {
@@ -33,6 +38,7 @@ const projects = [
     category: "E-commerce",
     github: "https://github.com/Angelcoder87/E-commerce-website",
     demo: "https://angelcoder87.github.io/E-commerce-website/",
+    image: novashopShot,
     featured: true,
   },
 ];

@@ -9,7 +9,7 @@ const stats = [
 export default function About() {
   return (
     <section id="about" className="relative py-24 px-6 overflow-hidden">
-      <div className="orb w-[380px] h-[380px] bg-purple-300/25 top-10 left-1/2"></div>
+      <div className="orb w-[380px] h-[380px] orb-pink orb-a top-10 left-1/2"></div>
 
       <div className="max-w-6xl mx-auto relative">
         <motion.div

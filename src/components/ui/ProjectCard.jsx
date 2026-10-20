@@ -9,12 +9,19 @@ const covers = [
 export default function ProjectCard({ project, index }) {
   return (
     <div className="glass rounded-3xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 flex flex-col">
-      <div className={`h-44 bg-gradient-to-br ${covers[index % covers.length]} relative`}>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="text-white/95 text-2xl font-extrabold tracking-tight px-6 text-center drop-shadow">
-            {project.title}
-          </span>
-        </div>
+      <div className={`h-44 relative overflow-hidden ${project.image ? "" : `bg-gradient-to-br ${covers[index % covers.length]}`}`}>
+        {project.image ? (
+          <>
+            <img src={project.image} alt={`${project.title} screenshot`} className="w-full h-full object-cover object-top" loading="lazy" />
+            <div className="absolute inset-0 bg-gradient-to-t from-white/55 via-transparent to-transparent"></div>
+          </>
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <span className="text-white/95 text-2xl font-extrabold tracking-tight px-6 text-center drop-shadow">
+              {project.title}
+            </span>
+          </div>
+        )}
         <span className="absolute top-4 left-4 glass-soft rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-ink/70">
           {project.category}
         </span>

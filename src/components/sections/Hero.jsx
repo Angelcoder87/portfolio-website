@@ -12,8 +12,8 @@ const trusted = [
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-32 pb-20 px-6 overflow-hidden">
-      <div className="orb w-[520px] h-[520px] bg-violet-400/25 -top-24 -right-24"></div>
-      <div className="orb w-[420px] h-[420px] bg-blue-400/20 bottom-0 -left-32"></div>
+      <div className="orb w-[520px] h-[520px] orb-violet orb-a -top-24 -right-24"></div>
+      <div className="orb w-[420px] h-[420px] orb-blue orb-b bottom-0 -left-32"></div>
 
       <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-16 items-center relative">
         <motion.div

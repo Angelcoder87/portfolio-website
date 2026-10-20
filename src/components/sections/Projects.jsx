@@ -5,7 +5,7 @@ import ProjectCard from "../ui/ProjectCard";
 export default function Projects() {
   return (
     <section id="work" className="relative py-24 px-6 overflow-hidden">
-      <div className="orb w-[420px] h-[420px] bg-violet-300/20 -right-32 top-24"></div>
+      <div className="orb w-[420px] h-[420px] orb-violet orb-a -right-32 top-24"></div>
 
       <div className="max-w-6xl mx-auto relative">
         <div className="flex flex-wrap items-end justify-between gap-4">

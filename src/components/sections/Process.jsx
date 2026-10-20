@@ -11,7 +11,7 @@ const steps = [
 export default function Process() {
   return (
     <section id="process" className="relative py-24 px-6 overflow-hidden">
-      <div className="orb w-[340px] h-[340px] bg-purple-300/20 left-1/3 bottom-0"></div>
+      <div className="orb w-[340px] h-[340px] orb-pink orb-b left-1/3 bottom-0"></div>
 
       <div className="max-w-6xl mx-auto relative">
         <div className="text-center max-w-2xl mx-auto">
