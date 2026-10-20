@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   SiReact,
   SiJavascript,
@@ -9,122 +10,57 @@ import {
   SiGithub,
   SiFigma,
   SiMysql,
+  SiVite,
 } from "react-icons/si";
 
 const skills = [
-  {
-    icon: <SiReact />,
-    name: "React",
-    level: "Intermediate",
-    color: "text-cyan-400",
-  },
-  {
-    icon: <SiJavascript />,
-    name: "JavaScript",
-    level: "Advanced",
-    color: "text-yellow-400",
-  },
-  {
-    icon: <SiTailwindcss />,
-    name: "Tailwind CSS",
-    level: "Advanced",
-    color: "text-sky-400",
-  },
-  {
-    icon: <SiHtml5 />,
-    name: "HTML",
-    level: "Advanced",
-    color: "text-orange-500",
-  },
-  {
-    icon: <SiCss />,
-    name: "CSS",
-    level: "Advanced",
-    color: "text-blue-500",
-  },
-  {
-    icon: <SiPython />,
-    name: "Python",
-    level: "Beginner",
-    color: "text-yellow-300",
-  },
-  {
-    icon: <SiGit />,
-    name: "Git",
-    level: "Intermediate",
-    color: "text-orange-400",
-  },
-  {
-    icon: <SiGithub />,
-    name: "GitHub",
-    level: "Intermediate",
-    color: "text-white",
-  },
-  {
-    icon: <SiFigma />,
-    name: "Figma",
-    level: "Beginner",
-    color: "text-pink-400",
-  },
-  {
-    icon: <SiMysql />,
-    name: "MySQL",
-    level: "Intermediate",
-    color: "text-blue-400",
-  },
+  { icon: <SiReact />, name: "React", color: "#61dafb" },
+  { icon: <SiJavascript />, name: "JavaScript", color: "#f7df1e" },
+  { icon: <SiTailwindcss />, name: "Tailwind", color: "#38bdf8" },
+  { icon: <SiHtml5 />, name: "HTML5", color: "#e34f26" },
+  { icon: <SiCss />, name: "CSS", color: "#3178c6" },
+  { icon: <SiPython />, name: "Python", color: "#ffd343" },
+  { icon: <SiGit />, name: "Git", color: "#f05033" },
+  { icon: <SiGithub />, name: "GitHub", color: "#1e1e2e" },
+  { icon: <SiFigma />, name: "Figma", color: "#a259ff" },
+  { icon: <SiMysql />, name: "MySQL", color: "#00758f" },
+  { icon: <SiVite />, name: "Vite", color: "#9575ff" },
 ];
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="py-24 px-6 bg-[#09090B]"
-    >
-      <div className="max-w-7xl mx-auto">
-
-        <div className="text-center mb-16">
-
-          <p className="uppercase tracking-[5px] text-violet-400 font-semibold">
-            My Skills
+    <section id="skills" className="relative py-24 px-6 overflow-hidden">
+      <div className="max-w-6xl mx-auto relative">
+        <div className="text-center max-w-2xl mx-auto">
+          <p className="text-sm font-bold tracking-[6px] uppercase gradient-text mb-4">
+            Stack
           </p>
-
-          <h2 className="text-5xl font-bold mt-4">
-            Technologies I Use
+          <h2 className="text-3xl lg:text-5xl font-extrabold text-ink">
+            Technologies I Use.
           </h2>
-
-          <p className="text-zinc-400 mt-6 max-w-2xl mx-auto">
-            I enjoy building modern web applications using
-            current technologies while continually learning
-            new tools and improving my skills.
-          </p>
-
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-
-          {skills.map((skill) => (
-            <div
-              key={skill.name}
-              className="group rounded-3xl bg-zinc-900 border border-white/10 p-8 hover:border-violet-500 transition duration-300 hover:-translate-y-2"
+        <div className="flex flex-wrap justify-center gap-6 mt-14">
+          {skills.map((s, i) => (
+            <motion.div
+              key={s.name}
+              initial={{ opacity: 0, scale: 0.85 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.05 }}
+              className="flex flex-col items-center gap-2"
             >
-
-              <div className={`text-5xl mb-6 ${skill.color}`}>
-                {skill.icon}
+              <div
+                className="glass w-20 h-20 rounded-full flex items-center justify-center text-3xl hover:-translate-y-2 transition-transform duration-300"
+                style={{ color: s.color }}
+                title={s.name}
+              >
+                {s.icon}
               </div>
-
-              <h3 className="text-xl font-semibold">
-                {skill.name}
-              </h3>
-
-              <p className="text-zinc-400 mt-2">
-                {skill.level}
-              </p>
-
-            </div>
+              <span className="text-xs font-semibold text-ink/50">{s.name}</span>
+            </motion.div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

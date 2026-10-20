@@ -1,45 +1,40 @@
 const projects = [
   {
     id: 1,
-    title: "Portfolio Website",
+    title: "VeriVoice",
+    subtitle: "Civic fact-checking assistant",
     description:
-      "A modern responsive portfolio built with React, Tailwind CSS, and Vite. Focused on clean UI, performance, and UX structure.",
-    tech: ["React", "Tailwind", "Vite"],
-    category: "Frontend",
-    github: "https://github.com/Angelcoder87/portfolio-website",
-    demo: "#",
-    image:
-      "https://placehold.co/600x400/18181b/ffffff?text=Portfolio",
-    featured: true
+      "A trilingual (English, Kiswahili, Sheng) browser tool that checks WhatsApp-style claims — text, voice notes and screenshots — and returns honest verdict cards with evidence and sources. Built for the OSF × Andela Hackathon 2026.",
+    tech: ["HTML", "CSS", "JavaScript", "Tesseract.js"],
+    category: "Web App",
+    github: "https://github.com/Angelcoder87/Verivoice",
+    demo: "https://angelcoder87.github.io/Verivoice/",
+    featured: true,
   },
-
   {
     id: 2,
-    title: "Pricing Card UI",
+    title: "Portfolio Website",
+    subtitle: "This site",
     description:
-      "Interactive pricing component with monthly and annual billing toggle using React state management.",
+      "A modern, responsive portfolio with glassmorphism styling, built with React, Tailwind CSS and Framer Motion. Focused on clean UI, performance and UX structure.",
+    tech: ["React", "Tailwind", "Vite", "Framer Motion"],
+    category: "Frontend",
+    github: "https://github.com/Angelcoder87/portfolio-website",
+    demo: "https://angelcoder87.github.io/portfolio-website/",
+    featured: true,
+  },
+  {
+    id: 3,
+    title: "Pricing Card UI",
+    subtitle: "Interactive component",
+    description:
+      "An interactive pricing component with monthly and annual billing toggle, built with React state management and Tailwind styling.",
     tech: ["React", "Tailwind"],
     category: "UI Component",
     github: "https://github.com/Angelcoder87/pricing-card-screening",
-    demo: "#",
-    image:
-      "https://placehold.co/600x400/18181b/ffffff?text=Pricing+Card",
-    featured: true
+    demo: null,
+    featured: true,
   },
-
-  {
-    id: 3,
-    title: "To-Do List App",
-    description:
-      "Simple task management app demonstrating DOM manipulation, state handling, and CRUD operations.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    category: "JavaScript App",
-    github: "https://github.com/Angelcoder87/todolist",
-    demo: "#",
-    image:
-      "https://placehold.co/600x400/18181b/ffffff?text=To-Do",
-    featured: false
-  }
 ];
 
 export default projects;

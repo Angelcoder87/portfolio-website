@@ -1,61 +1,64 @@
-import { motion } from "framer-motion";
+import { FiGithub, FiExternalLink } from "react-icons/fi";
 
-function ProjectCard({ project }) {
-  if (!project) return null;
+const covers = [
+  "from-violet-brand via-purple-400 to-blue-brand",
+  "from-blue-brand via-indigo-400 to-violet-brand",
+  "from-fuchsia-400 via-violet-brand to-blue-brand",
+];
 
+export default function ProjectCard({ project, index }) {
   return (
-    <motion.div
-      className="group relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900"
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-      whileHover={{ scale: 1.02 }}
-    >
-
-      {/* Image */}
-      <div className="relative overflow-hidden">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="h-56 w-full object-cover transition duration-500 group-hover:scale-110"
-        />
-
-        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4">
-
-          <a href={project.github} className="px-4 py-2 bg-zinc-900 text-white rounded-full">
-            GitHub
-          </a>
-
-          <a href={project.demo} className="px-4 py-2 bg-violet-600 text-white rounded-full">
-            Live
-          </a>
-
+    <div className="glass rounded-3xl overflow-hidden hover:-translate-y-2 transition-transform duration-300 flex flex-col">
+      <div className={`h-44 bg-gradient-to-br ${covers[index % covers.length]} relative`}>
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="text-white/95 text-2xl font-extrabold tracking-tight px-6 text-center drop-shadow">
+            {project.title}
+          </span>
         </div>
+        <span className="absolute top-4 left-4 glass-soft rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-ink/70">
+          {project.category}
+        </span>
       </div>
 
-      <div className="p-6">
-
-        <h3 className="text-xl font-bold text-white">
-          {project.title}
-        </h3>
-
-        <p className="mt-3 text-zinc-400 text-sm">
+      <div className="p-7 flex flex-col flex-1">
+        <h3 className="text-xl font-bold text-ink">{project.title}</h3>
+        <p className="text-xs font-semibold text-ink/40 uppercase tracking-wider mt-1">
+          {project.subtitle}
+        </p>
+        <p className="mt-3 text-sm text-ink/55 leading-6 flex-1">
           {project.description}
         </p>
-
-        <div className="mt-5 flex flex-wrap gap-2">
-          {project.tech?.map((item) => (
-            <span key={item} className="text-xs px-3 py-1 rounded-full bg-zinc-800 text-zinc-300">
-              {item}
+        <div className="flex flex-wrap gap-2 mt-4">
+          {project.tech.map((t) => (
+            <span
+              key={t}
+              className="glass-soft rounded-full px-3 py-1 text-xs font-medium text-ink/60"
+            >
+              {t}
             </span>
           ))}
         </div>
-
+        <div className="flex gap-3 mt-6">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-ink bg-ink text-white rounded-full px-5 py-2 hover:opacity-90 transition"
+          >
+            <FiGithub /> Code
+          </a>
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-ink/70 glass-soft rounded-full px-5 py-2 hover:text-violet-brand transition"
+            >
+              <FiExternalLink /> Live Demo
+            </a>
+          )}
+        </div>
       </div>
-
-    </motion.div>
+    </div>
   );
 }
-
-export default ProjectCard;

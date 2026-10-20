@@ -1,39 +1,59 @@
 @import "tailwindcss";
 
-/* Theme */
 @theme {
-  --color-primary: #8b5cf6;
-  --color-secondary: #a855f7;
-  --color-dark: #07050f;
-  --color-card: #111018;
-
+  --color-ink: #1e1e2e;
+  --color-mist: #f5f5fa;
+  --color-violet-brand: #7c3aed;
+  --color-blue-brand: #4f46e5;
   --font-display: "Inter", sans-serif;
 }
 
-/* Global Styles */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: #07050f;
-  color: white;
+  background: #f5f5fa;
+  color: #1e1e2e;
   font-family: var(--font-display);
   overflow-x: hidden;
 }
 
-/* Utilities */
+/* frosted glass card */
+.glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px rgba(124, 58, 237, 0.10);
+}
+
+.glass-soft {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
 .gradient-text {
-  background: linear-gradient(90deg, #8b5cf6, #c084fc);
+  background: linear-gradient(90deg, #7c3aed, #4f46e5);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
-.glow {
-  box-shadow: 0 0 30px rgba(139, 92, 246, 0.35);
+/* blurred organic orbs */
+.orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  pointer-events: none;
 }
-h1 {
-  font-size: 50px; /* 20px */
-  font-weight: 600;
+
+h1, h2, h3 {
+  letter-spacing: -0.02em;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.25);
 }
