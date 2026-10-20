@@ -159,7 +159,7 @@ I enjoy transforming ideas into responsive web applications with clean code and 
 
 **LinkedIn**
 
-https://www.linkedin.com/in/YOUR-LINKEDIN
+https://www.linkedin.com/in/angela-odhiambo
 
 **GitHub**
 
