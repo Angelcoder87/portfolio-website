@@ -79,11 +79,7 @@ export default function Hero() {
           <motion.img
             src={profile}
             alt="Angela Odhiambo"
-            className="w-full max-w-md rounded-[40px]"
-            style={{
-              maskImage: "radial-gradient(ellipse 52% 52% at 50% 46%, black 58%, transparent 92%)",
-              WebkitMaskImage: "radial-gradient(ellipse 52% 52% at 50% 46%, black 58%, transparent 92%)",
-            }}
+            className="w-full max-w-md rounded-[32px] shadow-[0_25px_70px_-20px_rgba(109,74,255,0.45)]"
           />
 
                   </motion.div>
