@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiDownload, FiTrendingUp, FiBriefcase } from "react-icons/fi";
+import { FiDownload } from "react-icons/fi";
 import profile from "../../assets/profile.webp";
 
 const trusted = [
@@ -84,34 +84,7 @@ export default function Hero() {
             />
           </div>
 
-          <motion.div
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="glass absolute -left-2 sm:left-2 top-10 rounded-2xl px-5 py-3 flex items-center gap-3"
-          >
-            <span className="w-10 h-10 rounded-full bg-violet-100 flex items-center justify-center text-violet-brand">
-              <FiBriefcase />
-            </span>
-            <div>
-              <p className="text-sm font-bold text-ink">2+ Years</p>
-              <p className="text-xs text-ink/50">Experience</p>
-            </div>
-          </motion.div>
-
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-            className="glass absolute -right-1 sm:right-4 bottom-12 rounded-2xl px-5 py-3 flex items-center gap-3"
-          >
-            <span className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-brand">
-              <FiTrendingUp />
-            </span>
-            <div>
-              <p className="text-sm font-bold text-ink">97%</p>
-              <p className="text-xs text-ink/50">First-Contact Resolution</p>
-            </div>
-          </motion.div>
-        </motion.div>
+                  </motion.div>
       </div>
     </section>
   );
