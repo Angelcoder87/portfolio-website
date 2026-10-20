@@ -76,13 +76,15 @@ export default function Hero() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.15, ease: "easeOut" }}
         >
-          <div className="glass rounded-[40px] p-3 max-w-md">
-            <img
-              src={profile}
-              alt="Angela Odhiambo"
-              className="rounded-[32px] w-full"
-            />
-          </div>
+          <motion.img
+            src={profile}
+            alt="Angela Odhiambo"
+            className="w-full max-w-md rounded-[40px]"
+            style={{
+              maskImage: "radial-gradient(ellipse 62% 60% at 50% 44%, black 60%, transparent 96%)",
+              WebkitMaskImage: "radial-gradient(ellipse 62% 60% at 50% 44%, black 60%, transparent 96%)",
+            }}
+          />
 
                   </motion.div>
       </div>
