@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FiDownload, FiTrendingUp, FiBriefcase } from "react-icons/fi";
-import profile from "../../assets/profile.png";
+import profile from "../../assets/profile.webp";
 
 const trusted = [
   "FlyRank",

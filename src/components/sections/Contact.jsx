@@ -4,14 +4,30 @@ import { FiMail, FiPhone, FiMapPin, FiSend } from "react-icons/fi";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", type: "Frontend Development", message: "" });
+  const [status, setStatus] = useState("idle");
 
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Project enquiry: ${form.type} — from ${form.name}`);
-    const body = encodeURIComponent(
-      `Hi Angela,\n\nMy name is ${form.name} (${form.email}).\nProject type: ${form.type}\n\n${form.message}\n`
-    );
-    window.location.href = `mailto:angelaodhiambo87@gmail.com?subject=${subject}&body=${body}`;
+    setStatus("sending");
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/angelaodhiambo87@gmail.com", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          _subject: `Portfolio enquiry: ${form.type} — from ${form.name}`,
+          Project_Type: form.type,
+          message: form.message,
+          _template: "table",
+        }),
+      });
+      if (!res.ok) throw new Error("send failed");
+      setForm({ name: "", email: "", type: "Frontend Development", message: "" });
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+    }
   };
 
   const inputCls =
@@ -118,12 +134,23 @@ export default function Contact() {
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
             />
-            <button
-              type="submit"
-              className="inline-flex items-center gap-2 bg-ink text-white font-semibold rounded-full px-8 py-3.5 hover:opacity-90 transition shadow-lg shadow-violet-200"
-            >
-              <FiSend /> Send Message
-            </button>
+            <div className="flex flex-wrap items-center gap-4">
+              <button
+                type="submit"
+                disabled={status === "sending"}
+                className="inline-flex items-center gap-2 bg-ink text-white font-semibold rounded-full px-8 py-3.5 hover:opacity-90 transition shadow-lg shadow-violet-200 disabled:opacity-50"
+              >
+                <FiSend /> {status === "sending" ? "Sending..." : "Send Message"}
+              </button>
+              {status === "sent" && (
+                <p className="text-sm font-semibold text-violet-brand">Message sent — thank you!</p>
+              )}
+              {status === "error" && (
+                <p className="text-sm font-semibold text-ink/60">
+                  Something went wrong — please email angelaodhiambo87@gmail.com instead.
+                </p>
+              )}
+            </div>
           </motion.form>
         </div>
       </div>
