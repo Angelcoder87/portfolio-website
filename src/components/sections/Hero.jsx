@@ -81,8 +81,8 @@ export default function Hero() {
             alt="Angela Odhiambo"
             className="w-full max-w-md rounded-[40px]"
             style={{
-              maskImage: "radial-gradient(ellipse 62% 60% at 50% 44%, black 60%, transparent 96%)",
-              WebkitMaskImage: "radial-gradient(ellipse 62% 60% at 50% 44%, black 60%, transparent 96%)",
+              maskImage: "radial-gradient(ellipse 52% 52% at 50% 46%, black 58%, transparent 92%)",
+              WebkitMaskImage: "radial-gradient(ellipse 52% 52% at 50% 46%, black 58%, transparent 92%)",
             }}
           />
 
