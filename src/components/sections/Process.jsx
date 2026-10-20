@@ -14,6 +14,7 @@ export default function Process() {
       <div className="orb w-[340px] h-[340px] orb-pink orb-b left-1/3 bottom-0"></div>
 
       <div className="max-w-6xl mx-auto relative">
+          <div className="orb orb-violet orb-b w-[500px] h-[500px] -top-20 -right-16"></div>
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-sm font-bold tracking-[6px] uppercase gradient-text mb-4">
             Process

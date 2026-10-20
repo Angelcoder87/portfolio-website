@@ -30,6 +30,7 @@ export default function Services() {
       <div className="orb w-[340px] h-[340px] orb-blue orb-b -left-24 top-20"></div>
 
       <div className="max-w-6xl mx-auto relative">
+          <div className="orb orb-pink orb-c w-[500px] h-[500px] -bottom-24 -right-16"></div>
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-sm font-bold tracking-[6px] uppercase gradient-text mb-4">
             Services

@@ -12,6 +12,7 @@ export default function About() {
       <div className="orb w-[380px] h-[380px] orb-pink orb-a top-10 left-1/2"></div>
 
       <div className="max-w-6xl mx-auto relative">
+          <div className="orb orb-violet orb-a w-[560px] h-[560px] -top-16 left-1/4"></div>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

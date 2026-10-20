@@ -31,6 +31,7 @@ export default function Skills() {
   return (
     <section id="skills" className="relative py-24 px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto relative">
+          <div className="orb orb-blue orb-a w-[500px] h-[500px] -top-20 -left-16"></div>
         <div className="text-center max-w-2xl mx-auto">
           <p className="text-sm font-bold tracking-[6px] uppercase gradient-text mb-4">
             Stack

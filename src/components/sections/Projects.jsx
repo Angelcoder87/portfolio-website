@@ -8,6 +8,7 @@ export default function Projects() {
       <div className="orb w-[420px] h-[420px] orb-violet orb-a -right-32 top-24"></div>
 
       <div className="max-w-6xl mx-auto relative">
+          <div className="orb orb-blue orb-c w-[500px] h-[500px] -bottom-24 -left-16"></div>
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <p className="text-sm font-bold tracking-[6px] uppercase gradient-text mb-4">
